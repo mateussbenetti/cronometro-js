@@ -44,6 +44,20 @@ function pauseTimer() {
   resumeBtn.style.display = "inline-block";
 }
 
+function resetTimer() {
+  clearInterval(interval);
+  minutes = 0;
+  seconds = 0;
+  milliseconds = 0;
+  isPaused = false;
+  minutesEl.innerHTML = "00";
+  secondsEl.innerHTML = "00";
+  millisecondsEl.innerHTML = "000";
+  startBtn.style.display = "inline-block";
+  pauseBtn.style.display = "none";
+  resumeBtn.style.display = "none";
+}
+
 function resumeTimer() {
   isPaused = false;
   resumeBtn.style.display = "none";
